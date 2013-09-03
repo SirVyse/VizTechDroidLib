@@ -8,7 +8,9 @@
             //Variables
             m_posX: 0,
             m_posY: 0,
-            m_touched: false
+            m_touched: false,
+			m_touchAreaHeight: 0,
+			m_touchAreaWidth: 0
 		},
             
         //Function Declarations
@@ -16,7 +18,8 @@
 		GetPosX,
         GetPosY,
 		Initialize,
-		IsTouched;
+		IsTouched,
+		SetTouchArea,
 
         Public = 
         {
@@ -50,8 +53,8 @@
 						Private.m_touched = true;
 						Private.m_posX = event.touches[0].clientX;
 						Private.m_posY = event.touches[0].clientY;
-						alert("X:" + Private.m_posX + "\nY:" + Private.m_posY + "\nOffsetTop:" + TheEngine.Instance().GetDiv().offsetTop + "\nOffsetLeft:" + TheEngine.Instance().GetDiv().offsetLeft
-							+ "\nInnerWidth:" + window.innerWidth + "\InnerHeight:" + window.innerHeight);
+						alert("X:" + Private.m_posX + "\nY:" + Private.m_posY + "\TouchAreaWidth:" + Private.m_touchAreaWidth + "\TouchAreaHeight:" + Private.m_touchAreaHeight
+							+ "\nInnerWidth:" + window.innerWidth + "\nInnerHeight:" + window.innerHeight);
 					});
 					
 				TheEngine.Instance().GetDiv().addEventListener('touchend', function()
@@ -64,7 +67,13 @@
 			IsTouched: function()
 			{
 				return Private.m_touched;
-			}
+			},
+			
+			SetTouchArea: function(height, width)
+			{
+				Private.m_touchAreaHeight = height;
+				Private.m_touchAreaWidth = width;
+			},	
         };
     }());
 

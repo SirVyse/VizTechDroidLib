@@ -226,7 +226,8 @@ function Engine()
                         Private.m_buffers[i].m_canvas.height = Private.m_maxScreenHeight;
                         Private.m_buffers[i].m_redrawBuffer = true;
                     }
-                }                    
+                }
+				TheInput.Instance().SetTouchArea(newHeight, newWidth);
             },
 
             Initialize: function(applicationName)
