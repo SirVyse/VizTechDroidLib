@@ -66,43 +66,43 @@
 <Object2D>
 	<Settings Name="E_Autoplay" Priority="3" Visible="true" />
 	<Texture Texture1="LAutoPlayLit.png" />
-	<Position x="643.0f" y="891.0f" />
-	<Scale x="1.219f" y="1.015f" />
+	<Position x="402.0f" y="522.0f" />
+	<Scale x="0.761875f" y="0.5947265625f" />
 </Object2D>
 
 <Object2D>
 	<Settings Name="E_Collect" Priority="3" Visible="true" />
 	<Texture Texture1="LCollectLit.png" />
-	<Position x="2.0f" y="891.0f" />
-	<Scale x="1.1875f" y="1.015f" />
+	<Position x="1.0f" y="522.0f" />
+	<Scale x="0.7421875f" y="0.5947265625f" />
 </Object2D>
 
 <Object2D>
 	<Settings Name="E_Menu" Priority="3" Visible="true" />
 	<Texture Texture1="LMenuLit.png" />
-	<Position x="170.0f" y="891.0f" />
-	<Scale x="1.1875f" y="1.015f" />
+	<Position x="106.0f" y="522.0f" />
+	<Scale x="0.7421875f" y="0.5947265625f" />
 </Object2D>
 
 <Object2D>
 	<Settings Name="E_Stake" Priority="3" Visible="true" />
 	<Texture Texture1="LStakeLit.png" />
-	<Position x="325.0f" y="891.0f" />
-	<Scale x="1.219f" y="1.015f" />
+	<Position x="203.0f" y="522.0f" />
+	<Scale x="0.761875f" y="0.5947265625f" />
 </Object2D>
 
 <Object2D>
 	<Settings Name="E_Start" Priority="3" Visible="true" />
 	<Texture Texture1="LStartLit.png" />
-	<Position x="1126.0f" y="891.0f" />
-	<Scale x="1.1875f" y="1.015f" />
+	<Position x="704.0f" y="522.0f" />
+	<Scale x="0.7421875f" y="0.5947265625f" />
 </Object2D>
 
 <Object2D>
 	<Settings Name="E_Info" Priority="3" Visible="true" />
 	<Texture Texture1="LInfoLit.png" />
-	<Position x="958.0f" y="891.0f" />
-	<Scale x="1.1875f" y="1.015f" />
+	<Position x="599.0f" y="522.0f" />
+	<Scale x="0.7421875f" y="0.5947265625f" />
 </Object2D>
 
 <Object2D>

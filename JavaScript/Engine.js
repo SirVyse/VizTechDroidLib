@@ -130,6 +130,7 @@ function Engine()
         AddState,
         GetBuffer,
         GetContext,
+		GetDiv,
         GetScreenHeight,
         GetScreenWidth,
         GetStateManager,
@@ -165,7 +166,12 @@ function Engine()
             {
                 return Private.m_context;
             },
-                
+
+			GetDiv: function()
+			{
+				return Private.m_div;
+			},
+			
             GetScreenHeight: function()
             {
                 return Private.m_screenHeight;
@@ -276,6 +282,7 @@ function Engine()
                     event.preventDefault();
                 });
 
+				TheInput.Instance().Initialize();
                 Private.m_systemTimer.Start();
             },
 
