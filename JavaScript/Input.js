@@ -51,10 +51,6 @@
 				TheEngine.Instance().GetDiv().addEventListener('touchstart', function(event)
 					{
 						Private.m_touched = true;
-						Private.m_posX = event.touches[0].clientX;
-						Private.m_posY = event.touches[0].clientY;
-						alert("X:" + Private.m_posX + "\nY:" + Private.m_posY + "\TouchAreaWidth:" + Private.m_touchAreaWidth + "\TouchAreaHeight:" + Private.m_touchAreaHeight
-							+ "\nInnerWidth:" + window.innerWidth + "\nInnerHeight:" + window.innerHeight);
 						
 						var width = window.innerWidth - Private.m_touchAreaWidth;
 						width /= 2.0;						
@@ -63,6 +59,8 @@
 						
 						Private.m_posX = event.touches[0].clientX - width;
 						Private.m_posY = event.touches[0].clientY - height;
+						
+						alert("X:" + Private.m_posX + "\nY:" + Private.m_posY);
 					});
 					
 				TheEngine.Instance().GetDiv().addEventListener('touchend', function()
