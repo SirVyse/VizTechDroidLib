@@ -58,9 +58,9 @@
 						height /= 2.0;		
 						
 						Private.m_posX = event.touches[0].clientX - width;
-						Private.m_posX *= window.innerWidth / TheEngine.Instance().GetScreenWidth();
+						Private.m_posX *= Private.m_touchAreaWidth / TheEngine.Instance().GetScreenWidth();
 						Private.m_posY = event.touches[0].clientY - height;
-						Private.m_posY *= window.innerHeight / TheEngine.Instance().GetScreenHeight();
+						Private.m_posY *= Private.m_touchAreaHeight / TheEngine.Instance().GetScreenHeight();
 						
 						alert("X:" + Private.m_posX + "\nY:" + Private.m_posY);
 					});
