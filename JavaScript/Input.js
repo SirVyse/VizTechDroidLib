@@ -19,7 +19,7 @@
         GetPosY,
 		Initialize,
 		IsTouched,
-		SetTouchArea,
+		SetTouchArea;
 
         Public = 
         {
@@ -73,7 +73,7 @@
 			{
 				Private.m_touchAreaHeight = height;
 				Private.m_touchAreaWidth = width;
-			},	
+			}
         };
     }());
 
