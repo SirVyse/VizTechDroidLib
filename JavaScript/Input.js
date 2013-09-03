@@ -55,6 +55,14 @@
 						Private.m_posY = event.touches[0].clientY;
 						alert("X:" + Private.m_posX + "\nY:" + Private.m_posY + "\TouchAreaWidth:" + Private.m_touchAreaWidth + "\TouchAreaHeight:" + Private.m_touchAreaHeight
 							+ "\nInnerWidth:" + window.innerWidth + "\nInnerHeight:" + window.innerHeight);
+						
+						var width = window.innerWidth - Private.m_touchAreaWidth;
+						width /= 2.0;						
+						var height = window.innerHeight - Private.m_touchAreaHeight;
+						height /= 2.0;		
+						
+						Private.m_posX = event.touches[0].clientX - width;
+						Private.m_posY = event.touches[0].clientY - height;
 					});
 					
 				TheEngine.Instance().GetDiv().addEventListener('touchend', function()
