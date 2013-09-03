@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MD5>
+<Object2D>
+	<Settings Name="E_RGlass" Priority="1" Visible="true" />
+	<Texture Texture1="RGlass1.png" />
+	<Instances>
+		<Instance Texture="Top">
+			<Scale x="0.78125f" y="1.1689453125f" />
+		</Instance>
+		<Instance Texture="Bottom">
+			<Position x="0.0f" y="496.0f" />
+			<Scale x="0.78125f" y="1.1689453125f" />
+		</Instance>
+		<Instance Texture="Left">
+			<Position x="0.0f" y="103.0f" />
+			<Scale x="0.78125f" y="1.1689453125f" />
+		</Instance>
+		<Instance Texture="Right">
+			<Position x="738.0f" y="103.0f" />
+			<Scale x="0.78125f" y="1.1689453125f" />
+		</Instance>
+		<Instance Texture="Middle">
+			<Position x="188.0f" y="103.0f" />
+			<Scale x="0.78125f" y="1.1689453125f" />
+		</Instance>
+		<Instance Texture="Middle">
+			<Position x="325.0f" y="103.0f" />
+			<Scale x="0.78125f" y="1.1689453125f" />
+		</Instance>
+		<Instance Texture="Middle">
+			<Position x="463.0f" y="103.0f" />
+			<Scale x="0.78125f" y="1.1689453125f" />
+		</Instance>
+		<Instance Texture="Middle">
+			<Position x="600.0f" y="103.0f" />
+			<Scale x="0.78125f" y="1.1689453125f" />
+		</Instance>
+	</Instances>
+</Object2D>
+
+<TextGroup>
+	<Settings Name="DrawText" Priority="4" Visible="true"  />
+	<Texture Texture1="Arial.png" />
+	<Text>
+		<Settings Name="DrawName" Alignment="Left" />
+		<Position x="19.0f" y="46.0f" />
+		<Scale x="0.8f" y="0.8f" />
+		<Message>DEBUG DRAW</Message>
+	</Text>
+</TextGroup>
+
+<Object2D>
+	<Settings Name="E_GlassCredits" Priority="3" Visible="true" />
+	<Texture Texture1="GlassCredits.png" />
+	<Position x="606.0f" y="2.0f" />
+	<Scale x="0.7325f" y="0.83293125f" />
+</Object2D>
+
+<Object2D>
+	<Settings Name="E_WildCashLogo" Priority="3" Visible="true" />
+	<Texture Texture1="WildCashLogo.png" />
+	<Position x="182.0f" y="2.0f" />
+	<Scale x="0.850625f" y="0.778125f" />
+</Object2D>
+
+<Object2D>
+	<Settings Name="E_Autoplay" Priority="3" Visible="true" />
+	<Texture Texture1="LAutoPlayLit.png" />
+	<Position x="643.0f" y="891.0f" />
+	<Scale x="1.219f" y="1.015f" />
+</Object2D>
+
+<Object2D>
+	<Settings Name="E_Collect" Priority="3" Visible="true" />
+	<Texture Texture1="LCollectLit.png" />
+	<Position x="2.0f" y="891.0f" />
+	<Scale x="1.1875f" y="1.015f" />
+</Object2D>
+
+<Object2D>
+	<Settings Name="E_Menu" Priority="3" Visible="true" />
+	<Texture Texture1="LMenuLit.png" />
+	<Position x="170.0f" y="891.0f" />
+	<Scale x="1.1875f" y="1.015f" />
+</Object2D>
+
+<Object2D>
+	<Settings Name="E_Stake" Priority="3" Visible="true" />
+	<Texture Texture1="LStakeLit.png" />
+	<Position x="325.0f" y="891.0f" />
+	<Scale x="1.219f" y="1.015f" />
+</Object2D>
+
+<Object2D>
+	<Settings Name="E_Start" Priority="3" Visible="true" />
+	<Texture Texture1="LStartLit.png" />
+	<Position x="1126.0f" y="891.0f" />
+	<Scale x="1.1875f" y="1.015f" />
+</Object2D>
+
+<Object2D>
+	<Settings Name="E_Info" Priority="3" Visible="true" />
+	<Texture Texture1="LInfoLit.png" />
+	<Position x="958.0f" y="891.0f" />
+	<Scale x="1.1875f" y="1.015f" />
+</Object2D>
+
+<Object2D>
+	<Settings Name="E_Reel1" Priority="0" Visible="false"/>
+	<Texture Texture1="Symbols.png" />
+	<Instances Amount="5">
+		<Instance Visible="false">
+			<Position x="100.0f" y="-51.0f" />
+			<Scale x="1.5625" y="1.745625" />
+		</Instance>
+		<Instance>
+			<Position x="100.0f" y="173.0f" />
+			<Scale x="1.5625" y="1.745625" />
+		</Instance>
+		<Instance>
+			<Position x="100.0f" y="397.0f" />
+			<Scale x="1.5625" y="1.745625" />
+		</Instance>
+		<Instance>
+			<Position x="100.0f" y="621.0f" />
+			<Scale x="1.5625" y="1.745625" />
+		</Instance>
+		<Instance Visible="false">
+			<Position x="100.0f" y="845.0f" />
+			<Scale x="1.5625" y="1.745625" />
+		</Instance>
+	</Instances>
+</Object2D>
+
+<Object2D>
+	<Settings Name="E_Reel1Strip" Visible="true" Priority="0" />
+	<Texture Texture1="Reels.png" />
+	<Position x="100.0f" y="175.0f" />
+	<Scale x="2.5f" y="2.66f" />
+	<Instances Amount="5">
+		<Instance Texture="blur01.png">
+			<Position x="63.0f" y="103.0f" />
+			<Scale x="1.5625f" y="1.55859375f" />
+		</Instance>
+		<Instance Texture="blur01.png">
+			<Position x="200.0f" y="103.0f" />
+			<Scale x="1.5625f" y="1.55859375f" />
+		</Instance>
+		<Instance Texture="blur01.png">
+			<Position x="338.0f" y="103.0f" />
+			<Scale x="1.5625f" y="1.55859375f" />
+		</Instance>
+		<Instance Texture="blur01.png">
+			<Position x="475.0f" y="103.0f" />
+			<Scale x="1.5625f" y="1.55859375f" />
+		</Instance>
+		<Instance Texture="blur01.png">
+			<Position x="613.0f" y="103.0f" />
+			<Scale x="1.5625f" y="1.55859375f" />
+		</Instance>
+	</Instances>
+</Object2D>
+</MD5>

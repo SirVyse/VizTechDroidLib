@@ -1,0 +1,33 @@
+﻿<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>VizTechDroid Library</title>
+    <link rel="stylesheet" href="CSS/Base.css" type="text/css" />
+    <script type="text/javascript" src='JavaScript/jquery.min.js'></script>
+    <script type="text/javascript" src='JavaScript/LoadScript.js'></script>
+</head>
+<body>
+    <script>
+        var timerID = setInterval(function()
+        {
+            if(!scriptLoading)
+            {
+                TheEngine.Instance().Initialize("MegaBars");
+
+                var state = new State("HoldStart");
+                TheEngine.Instance().AddState(state);
+                TheEngine.Instance().GetStateManager().SetCurrentState("HoldStart");
+
+                clearInterval(timerID);
+                delete scriptLoading;
+
+                //TheEngine.Instance().Run();
+                var totalFrames = 0, totalTime = 0;
+                
+                TheEngine.Instance().Run();
+            }
+        }, 1000);
+    </script>
+</body>
+</html>
