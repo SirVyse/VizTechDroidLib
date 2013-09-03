@@ -39,10 +39,18 @@
 			
 			Initialize: function()
 			{
-				TheEngine.Instance().GetDiv().addEventListener('touchstart', function()
+				TheEngine.Instance().GetDiv().addEventListener('touchmove', function(event)
 					{
-						alert("Touched");
+						Private.m_posX = event.touches[0].clientX;
+						Private.m_posY = event.touches[0].clientY;
+					});
+					
+				TheEngine.Instance().GetDiv().addEventListener('touchstart', function(event)
+					{
 						Private.m_touched = true;
+						Private.m_posX = event.touches[0].clientX;
+						Private.m_posY = event.touches[0].clientY;
+						alert("X:" + Private.m_posX + "   Y:" + Private.m_posY);
 					});
 					
 				TheEngine.Instance().GetDiv().addEventListener('touchend', function()
