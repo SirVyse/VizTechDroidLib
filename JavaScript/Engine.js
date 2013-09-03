@@ -310,14 +310,13 @@ function Engine()
                 }
             },
 
-            Run: function()
+            Run: function(stateName)
             {
                 Private.m_loading = false;
                 Private.m_running = true;
 
-                TheTextureManager.Instance().LoadTextures();
-            
-                Private.m_stateManager.GetCurrentState().Enter();
+				Private.m_stateManager.SetCurrentState(stateName);
+                TheTextureManager.Instance().LoadTextures();            
 
                 var timerID = setInterval(function()
                 {
@@ -326,6 +325,7 @@ function Engine()
                         TheObjectHandler.Instance().LoadObjects();     
                         Public.HandleResize();                       
                         clearInterval(timerID);
+						Private.m_stateManager.GetCurrentState().Enter();
                         
                         /*for(var i = 0; i < 5; i++)
                         {           
@@ -334,12 +334,6 @@ function Engine()
                             b.m_y = -1000; 
                             a.SetVelocity(b);
                         }*/
-
-                        for(var i = 0; i < 5; i++)
-                        {           
-                            var a = TheObjectHandler.Instance().GetObject("E_Reel1Strip").GetInstance(i);
-                            a.PlaySprite(true, 0.01, 0, 49);
-                        }
 
                         Run = function()
                         {

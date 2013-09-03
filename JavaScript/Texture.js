@@ -136,7 +136,7 @@ function Texture()
                 }
             }
 
-            TheTextureManager.Instance().AddTexture(that);
+            TheTextureManager.Instance().AddTexture(that, Private.m_name);
         };
 
         Private.m_texture.onload = function()

@@ -65,42 +65,42 @@
 
 <Object2D>
 	<Settings Name="E_Autoplay" Priority="3" Visible="true" />
-	<Texture Texture1="LAutoPlayLit.png" />
+	<Texture Texture1="AutoplayButton.png" Sprite="AutoplayLit" />
 	<Position x="402.0f" y="522.0f" />
 	<Scale x="0.761875f" y="0.5947265625f" />
 </Object2D>
 
 <Object2D>
 	<Settings Name="E_Collect" Priority="3" Visible="true" />
-	<Texture Texture1="LCollectLit.png" />
+	<Texture Texture1="CollectButton.png" Sprite="CollectLit" />
 	<Position x="1.0f" y="522.0f" />
 	<Scale x="0.7421875f" y="0.5947265625f" />
 </Object2D>
 
 <Object2D>
 	<Settings Name="E_Menu" Priority="3" Visible="true" />
-	<Texture Texture1="LMenuLit.png" />
+	<Texture Texture1="MenuButton.png" Sprite="MenuLit" />
 	<Position x="106.0f" y="522.0f" />
 	<Scale x="0.7421875f" y="0.5947265625f" />
 </Object2D>
 
 <Object2D>
 	<Settings Name="E_Stake" Priority="3" Visible="true" />
-	<Texture Texture1="LStakeLit.png" />
+	<Texture Texture1="StakeButton.png" Sprite="StakeLit" />
 	<Position x="203.0f" y="522.0f" />
 	<Scale x="0.761875f" y="0.5947265625f" />
 </Object2D>
 
 <Object2D>
 	<Settings Name="E_Start" Priority="3" Visible="true" />
-	<Texture Texture1="LStartLit.png" />
+	<Texture Texture1="StartButton.png" Sprite="StartLit" />
 	<Position x="704.0f" y="522.0f" />
 	<Scale x="0.7421875f" y="0.5947265625f" />
 </Object2D>
 
 <Object2D>
 	<Settings Name="E_Info" Priority="3" Visible="true" />
-	<Texture Texture1="LInfoLit.png" />
+	<Texture Texture1="InfoButton.png" Sprite="InfoLit" />
 	<Position x="599.0f" y="522.0f" />
 	<Scale x="0.7421875f" y="0.5947265625f" />
 </Object2D>

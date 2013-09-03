@@ -56,7 +56,7 @@
             GetTexture: function(textureName)
             {
                 if(!Private.m_textures.hasOwnProperty(textureName))
-                {
+                {	
                     alert("Cannot retrieve texture:" + textureName + " from TheTextureManager, because it does not exist!");
                     return false;
                 }

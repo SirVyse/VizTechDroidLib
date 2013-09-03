@@ -19,6 +19,7 @@
         GetPosY,
 		Initialize,
 		IsTouched,
+		Pick2D,
 		SetTouchArea;
 
         Public = 
@@ -44,8 +45,15 @@
 			{
 				TheEngine.Instance().GetDiv().addEventListener('touchmove', function(event)
 					{
-						Private.m_posX = event.touches[0].clientX;
-						Private.m_posY = event.touches[0].clientY;
+						var width = window.innerWidth - Private.m_touchAreaWidth;
+						width /= 2.0;						
+						var height = window.innerHeight - Private.m_touchAreaHeight;
+						height /= 2.0;		
+						
+						Private.m_posX = event.touches[0].clientX - width;
+						Private.m_posX *= TheEngine.Instance().GetScreenWidth() / Private.m_touchAreaWidth;
+						Private.m_posY = event.touches[0].clientY - height;
+						Private.m_posY *= TheEngine.Instance().GetScreenHeight() / Private.m_touchAreaHeight;
 					});
 					
 				TheEngine.Instance().GetDiv().addEventListener('touchstart', function(event)
@@ -75,6 +83,29 @@
 			IsTouched: function()
 			{
 				return Private.m_touched;
+			},
+			
+			Pick2D: function(object2D)
+			{
+				var texture = object2D.GetTexture();
+				var width = texture.GetWidth();
+				var height = texture.GetHeight();
+				
+				if(texture.HasAtlas())
+				{
+					var coords = texture.GetAtlas().GetAtlasTexCoordByID(object2D.GetCurrentSprite());
+					width = coords.m_z;
+					height = coords.m_w;
+				}
+				
+				width *= object2D.GetScale().m_x;
+				height *= object2D.GetScale().m_y;
+				
+				if((Private.m_posX >= object2D.GetPosition().m_x) && (Private.m_posX <= object2D.GetPosition().m_x + width) && (Private.m_posY >= object2D.GetPosition().m_y) && (Private.m_posY <= object2D.GetPosition().m_y + height))
+				{
+					return true;
+				}
+				return false;
 			},
 			
 			SetTouchArea: function(height, width)

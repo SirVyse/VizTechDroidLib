@@ -231,6 +231,11 @@ function Object2D()
         }
 
         Private.m_texture = TheTextureManager.Instance().GetTextureClass(textures[0].getAttribute("Texture1"));
+		
+		if(textures[0].hasAttribute("Sprite"))
+		{
+			Private.m_currentSprite = Private.m_texture.GetAtlas().GetAtlasPieceID(textures[0].getAttribute("Sprite"));
+		}
 
         if(position.length)
         {

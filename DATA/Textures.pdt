@@ -158,27 +158,58 @@
 	</Atlas>
 </Texture>
 
+<Texture Filename="AutoplayButton.png">
+	<Atlas>
+		<Piece Name="AutoplayLit" OffsetX="0.0f" OffsetY="0.0f" Width="0.5f" Height="0.5f" />
+		<Piece Name="AutoplayPressed" OffsetX="0.5f" OffsetY="0.0f" Width="0.5f" Height="0.5f" />
+		<Piece Name="AutoplayOff" OffsetX="0.0f" OffsetY="0.5f" Width="0.5f" Height="0.5f" />
+	</Atlas>
+</Texture>
+
+<Texture Filename="CollectButton.png">
+	<Atlas>
+		<Piece Name="CollectLit" OffsetX="0.0f" OffsetY="0.0f" Width="0.5f" Height="0.5f" />
+		<Piece Name="CollectPressed" OffsetX="0.5f" OffsetY="0.0f" Width="0.5f" Height="0.5f" />
+		<Piece Name="CollectOff" OffsetX="0.0f" OffsetY="0.5f" Width="0.5f" Height="0.5f" />
+	</Atlas>
+</Texture>
+
+<Texture Filename="InfoButton.png">
+	<Atlas>
+		<Piece Name="InfoLit" OffsetX="0.0f" OffsetY="0.0f" Width="0.5f" Height="0.5f" />
+		<Piece Name="InfoPressed" OffsetX="0.5f" OffsetY="0.0f" Width="0.5f" Height="0.5f" />
+		<Piece Name="InfoOff" OffsetX="0.0f" OffsetY="0.5f" Width="0.5f" Height="0.5f" />
+	</Atlas>
+</Texture>
+
+<Texture Filename="MenuButton.png">
+	<Atlas>
+		<Piece Name="MenuLit" OffsetX="0.0f" OffsetY="0.0f" Width="0.5f" Height="0.5f" />
+		<Piece Name="MenuPressed" OffsetX="0.5f" OffsetY="0.0f" Width="0.5f" Height="0.5f" />
+		<Piece Name="MenuOff" OffsetX="0.0f" OffsetY="0.5f" Width="0.5f" Height="0.5f" />
+	</Atlas>
+</Texture>
+
+<Texture Filename="StakeButton.png">
+	<Atlas>
+		<Piece Name="StakeLit" OffsetX="0.0f" OffsetY="0.0f" Width="0.5f" Height="0.5f" />
+		<Piece Name="StakePressed" OffsetX="0.5f" OffsetY="0.0f" Width="0.5f" Height="0.5f" />
+		<Piece Name="StakeOff" OffsetX="0.0f" OffsetY="0.5f" Width="0.5f" Height="0.5f" />
+	</Atlas>
+</Texture>
+
+
+<Texture Filename="StartButton.png">
+	<Atlas>
+		<Piece Name="StartLit" OffsetX="0.0f" OffsetY="0.0f" Width="0.5f" Height="0.5f" />
+		<Piece Name="StartPressed" OffsetX="0.5f" OffsetY="0.0f" Width="0.5f" Height="0.5f" />
+		<Piece Name="StartOff" OffsetX="0.0f" OffsetY="0.5f" Width="0.5f" Height="0.5f" />
+	</Atlas>
+</Texture>
+
 <Texture Filename="Shadow.png" />
 <Texture Filename="ShadowSep.png" />
 <Texture Filename="GlassCredits.png" />
-<Texture Filename="LAutoPlayLit.png" />
-<Texture Filename="LAutoPlayNLit.png" />
-<Texture Filename="LAutoPlayPressedLit.png" />
-<Texture Filename="LCollectLit.png" />
-<Texture Filename="LCollectNLit.png" />
-<Texture Filename="LCollectPressedLit.png" />
-<Texture Filename="LInfoLit.png" />
-<Texture Filename="LInfoNLit.png" />
-<Texture Filename="LInfoPressedLit.png" />
-<Texture Filename="LMenuLit.png" />
-<Texture Filename="LMenuNLit.png" />
-<Texture Filename="LMenuPressedLit.png" />
-<Texture Filename="LStakeLit.png" />
-<Texture Filename="LStakeNLit.png" />
-<Texture Filename="LStakePressedLit.png" />
-<Texture Filename="LStartLit.png" />
-<Texture Filename="LStartNLit.png" />
-<Texture Filename="LStartPressedLit.png" />
 <Texture Filename="symbol1d.png" />
 <Texture Filename="WildCashLogo.png" />
 </MD5>
