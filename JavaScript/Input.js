@@ -69,13 +69,10 @@
 						Private.m_posX *= TheEngine.Instance().GetScreenWidth() / Private.m_touchAreaWidth;
 						Private.m_posY = event.touches[0].clientY - height;
 						Private.m_posY *= TheEngine.Instance().GetScreenHeight() / Private.m_touchAreaHeight;
-						
-						alert("X:" + Private.m_posX + "\nY:" + Private.m_posY);
 					});
 					
 				TheEngine.Instance().GetDiv().addEventListener('touchend', function()
 					{
-						alert("Not Touched");
 						Private.m_touched = false;
 					});
 			},

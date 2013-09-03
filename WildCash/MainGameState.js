@@ -35,6 +35,10 @@
 				TheObjectHandler.Instance().GetObject("E_Autoplay").SetCurrentSprite(1);
 			}
 		}
+		else
+		{
+			TheObjectHandler.Instance().GetObject("E_Autoplay").SetCurrentSprite(0);
+		}
 	};
 
     this.SetName = function(stateName)
