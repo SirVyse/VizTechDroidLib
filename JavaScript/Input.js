@@ -58,7 +58,9 @@
 						height /= 2.0;		
 						
 						Private.m_posX = event.touches[0].clientX - width;
+						Private.m_posX *= window.innerWidth / Private.m_touchAreaWidth;
 						Private.m_posY = event.touches[0].clientY - height;
+						Private.m_posY *= window.innerHeight / Private.m_touchAreaHeight;
 						
 						alert("X:" + Private.m_posX + "\nY:" + Private.m_posY);
 					});
