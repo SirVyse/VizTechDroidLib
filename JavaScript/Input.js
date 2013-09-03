@@ -50,7 +50,7 @@
 						Private.m_touched = true;
 						Private.m_posX = event.touches[0].clientX;
 						Private.m_posY = event.touches[0].clientY;
-						alert("X:" + Private.m_posX + "   Y:" + Private.m_posY);
+						alert("X:" + Private.m_posX + "   Y:" + Private.m_posY + "   OffsetTop:" + TheEngine.Instance().GetDiv().offsetTop + "   OffsetLeft:" + TheEngine.Instance().GetDiv().offsetLeft);
 					});
 					
 				TheEngine.Instance().GetDiv().addEventListener('touchend', function()
