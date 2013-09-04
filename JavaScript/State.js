@@ -18,7 +18,7 @@ State.prototype.GetName = function()
 
 State.prototype.SetName = function(stateName)
 {
-	State.prototype.m_stateName = stateName;
+	State.prototype.Private.m_stateName = stateName;
 };
 
 State.prototype.Update = function(){return;};

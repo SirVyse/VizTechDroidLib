@@ -1,7 +1,7 @@
 ﻿function ButtonProcess()
 {
     //Public Member Functions
-	this.Completed = function()
+	this.Complete = function()
 	{
 		TheObjectHandler.Instance().GetObject("E_Autoplay").SetCurrentSprite(0);
 	};
@@ -15,7 +15,7 @@
 	{
 		if(!TheInput.Instance().IsTouched())
 		{
-			SetCompleted();
+			this.SetCompleted();
 		}
 	};
 }

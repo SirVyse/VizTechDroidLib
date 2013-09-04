@@ -1,5 +1,7 @@
 ﻿function MainGameState()
 {
+	var buttonPressed = false;
+
     //Public Member Functions
     this.Enter = function()
 	{
@@ -12,12 +14,13 @@
 
     this.Update = function()
 	{
-		if(TheInput.Instance().IsTouched())
+		if(TheInput.Instance().IsTouched() && !buttonPressed)
 		{
 			if(TheInput.Instance().Pick2D(TheObjectHandler.Instance().GetObject("E_Autoplay")))
 			{
 				var process = new ButtonProcess();
 				TheEngine.Instance().GetProcessManager().AddProcessToList(process);
+				buttonPressed = true;
 			}
 		}
 	};

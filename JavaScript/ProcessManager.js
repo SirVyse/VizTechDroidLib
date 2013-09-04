@@ -13,7 +13,7 @@
     //Public Member Functions
     this.AddProcessToList = function(process)
     {
-		var id = function()
+		function GetID()
 		{
 			var value = Private.m_processList.length;
 			while(Private.m_processList.hasOwnProperty(value))
@@ -22,6 +22,8 @@
 			}
 			return value;
 		};
+	
+		var id = GetID();
         Private.m_processList[id] = process;
     };
 
