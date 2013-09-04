@@ -110,7 +110,7 @@
             Private.m_lastFPSUpdate = Private.m_currentTime;
             Private.m_numFrames = 0;
 
-            console.log(Private.m_fps);
+            //console.log(Private.m_fps);
         }
 
         Private.m_lastTime = Private.m_currentTime;

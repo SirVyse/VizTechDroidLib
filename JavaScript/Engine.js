@@ -118,6 +118,7 @@ function Engine()
             m_loading: true,
             m_maxScreenHeight: 600,
             m_maxScreenWidth: 800,
+			m_processManager: new ProcessManager(),
             m_running: true,
             m_screenHeight: 0,
             m_screenWidth: 0,
@@ -131,6 +132,7 @@ function Engine()
         GetBuffer,
         GetContext,
 		GetDiv,
+		GetProcessManager,
         GetScreenHeight,
         GetScreenWidth,
         GetStateManager,
@@ -170,6 +172,11 @@ function Engine()
 			GetDiv: function()
 			{
 				return Private.m_div;
+			},
+			
+			GetProcessManager: function()
+			{
+				return Private.m_processManager;
 			},
 			
             GetScreenHeight: function()
@@ -343,7 +350,8 @@ function Engine()
                             }
 
                             Private.m_systemTimer.Update();
-                            Private.m_stateManager.GetCurrentState().Update();   
+                            Private.m_stateManager.GetCurrentState().Update();  
+							Private.m_processManager.UpdateProcesses();
                         
                             /*for(var i = 0; i < 5; i++)
                             {           

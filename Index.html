@@ -16,11 +16,20 @@
             {
 				clearInterval(timerID);
 				delete scriptLoading;
-				
-				LoadScript("WildCash/MainGameState.js", function()
-				{				
-					TheEngine.Instance().Initialize("MegaBars");	
-					TheEngine.Instance().Run("MainGameState");
+						
+				LoadScript("WildCash/GameLoad.js", function()
+				{		
+					var gameLoadID = setInterval(function()
+					{
+						if(!gameLoading)
+						{
+							clearInterval(gameLoadID);
+							delete gameLoading;
+							
+							TheEngine.Instance().Initialize("MegaBars");	
+							TheEngine.Instance().Run("MainGameState");
+						}
+					}, 1000);
 				});
             }
         }, 1000);
