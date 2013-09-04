@@ -16,8 +16,6 @@
 	this.Complete = function()
 	{
 		Private.m_reel.SetVisible(true);
-		
-		Private.m_blurReel.StopSpritePlay();
 		Private.m_blurReel.SetVisible(false);
 		
 		for(var i = 0; i < 3; i++)

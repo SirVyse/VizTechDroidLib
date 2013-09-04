@@ -439,14 +439,6 @@ function Object2D()
         }
         Private.m_buffer.m_redrawBuffer = true
     };
-	
-	this.StopSpritePlay = function()
-	{
-        if(typeof Private.m_spriteSheetControl === "object")
-        {
-            delete Private.m_spriteSheetControl;
-        }
-	};
 
     this.Update = function(deltaTime)
     {
@@ -737,14 +729,6 @@ function Instance2D(attachedObject)
         }
         Private.m_attachedObject.GetBuffer().m_redrawBuffer = true
     };
-	
-	this.StopSpritePlay = function()
-	{
-        if(typeof Private.m_spriteSheetControl === "object")
-        {
-            delete Private.m_spriteSheetControl;
-        }
-	};	
 
     this.Update = function(deltaTime)
     {
