@@ -18,6 +18,7 @@
 	{
 		Private.m_button.Clear();
 		TheButtons.Instance().SetButtonProcessEnded();
+		TheInput.Instance().SetTouchOff();
 	};
 	
     this.Init = function()

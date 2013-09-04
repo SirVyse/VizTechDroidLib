@@ -20,7 +20,8 @@
 		Initialize,
 		IsTouched,
 		Pick2D,
-		SetTouchArea;
+		SetTouchArea,
+		SetTouchOff;
 
         Public = 
         {
@@ -180,6 +181,11 @@
 			{
 				Private.m_touchAreaHeight = height;
 				Private.m_touchAreaWidth = width;
+			},
+			
+			SetTouchOff: function()
+			{
+				Private.m_touched = false;
 			}
         };
     }());
