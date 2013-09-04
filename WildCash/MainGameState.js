@@ -22,6 +22,26 @@
 		{
 		
 		}
+		else if(TheButtons.Instance().ButtonPressed("Info"))
+		{
+		
+		}
+		else if(TheButtons.Instance().ButtonPressed("Autoplay"))
+		{
+		
+		}
+		else if(TheButtons.Instance().ButtonPressed("Stake"))
+		{
+		
+		}
+		else if(TheButtons.Instance().ButtonPressed("Menu"))
+		{
+		
+		}
+		else if(TheButtons.Instance().ButtonPressed("Collect"))
+		{
+		
+		}
 	};
 }
 
