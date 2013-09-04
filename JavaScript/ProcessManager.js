@@ -5,6 +5,7 @@
         Private = 
         {
             //Variables
+			m_numProcessesList: 0,
             m_processList: {},
             m_processQueue: []
         };
@@ -15,7 +16,7 @@
     {
 		function GetID()
 		{
-			var value = Private.m_processList.length;
+			var value = Private.m_numProcessesList;
 			while(Private.m_processList.hasOwnProperty(value))
 			{
 				value--;
@@ -25,6 +26,7 @@
 	
 		var id = GetID();
         Private.m_processList[id] = process;
+		Private.m_numProcessesList++;
     };
 
     this.AddProcessToQueue = function(process)
@@ -91,6 +93,7 @@
 			{
 				process.Complete();
 				delete Private.m_processList[i];
+				Private.m_numProcessesList--;
 			}
 		}
 		

@@ -3,7 +3,8 @@
 
 }
 
-Process.prototype.Private = {
+Process.prototype.Private = 
+{
 	m_processState: "Uninitialized"
 };
 

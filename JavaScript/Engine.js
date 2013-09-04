@@ -317,7 +317,7 @@ function Engine()
                 }
             },
 
-            Run: function(stateName)
+            Run: function(stateName, SetupCallback)
             {
                 Private.m_loading = false;
                 Private.m_running = true;
@@ -332,6 +332,9 @@ function Engine()
                         TheObjectHandler.Instance().LoadObjects();     
                         Public.HandleResize();                       
                         clearInterval(timerID);
+						
+						SetupCallback();
+						
 						Private.m_stateManager.GetCurrentState().Enter();
                         
                         /*for(var i = 0; i < 5; i++)

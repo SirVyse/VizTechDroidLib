@@ -114,6 +114,11 @@
 					{
 						Private.m_touched = false;
 					})
+					
+				TheEngine.Instance().GetDiv().addEventListener('mouseout', function()
+					{
+						Private.m_touched = false;
+					})
 			},
 			
 			IsTouched: function()
@@ -138,6 +143,29 @@
 				height *= object2D.GetScale().m_y;
 				
 				if((Private.m_posX >= object2D.GetPosition().m_x) && (Private.m_posX <= object2D.GetPosition().m_x + width) && (Private.m_posY >= object2D.GetPosition().m_y) && (Private.m_posY <= object2D.GetPosition().m_y + height))
+				{
+					return true;
+				}
+				return false;
+			},
+			
+			Pick2DInstance: function(object2D, instance)
+			{
+				var texture = object2D.GetTexture();
+				var width = texture.GetWidth();
+				var height = texture.GetHeight();
+				
+				if(texture.HasAtlas())
+				{
+					var coords = texture.GetAtlas().GetAtlasTexCoordByID(instance.GetCurrentSprite());
+					width = coords.m_z;
+					height = coords.m_w;
+				}
+				
+				width *= instance.GetScale().m_x;
+				height *= instance.GetScale().m_y;
+				
+				if((Private.m_posX >= instance.GetPosition().m_x) && (Private.m_posX <= instance.GetPosition().m_x + width) && (Private.m_posY >= instance.GetPosition().m_y) && (Private.m_posY <= instance.GetPosition().m_y + height))
 				{
 					return true;
 				}

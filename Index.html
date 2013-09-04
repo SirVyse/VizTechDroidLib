@@ -26,8 +26,8 @@
 							clearInterval(gameLoadID);
 							delete gameLoading;
 							
-							TheEngine.Instance().Initialize("MegaBars");	
-							TheEngine.Instance().Run("MainGameState");
+							TheEngine.Instance().Initialize("MegaBars");						
+							TheEngine.Instance().Run("MainGameState", function(){TheButtons.Instance().Initialize();});
 						}
 					}, 1000);
 				});
