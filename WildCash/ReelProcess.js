@@ -17,6 +17,7 @@
 	{
 		Private.m_reel.SetVisible(true);
 		Private.m_blurReel.SetVisible(false);
+		Private.m_blurReel.StopSpritePlay();
 		
 		for(var i = 0; i < 3; i++)
 		{           

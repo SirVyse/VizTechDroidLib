@@ -370,7 +370,7 @@ function Engine()
 
                             TheObjectHandler.Instance().Draw();
 
-                            //TheObjectHandler.Instance().GetObject("DrawName").SetMessage(Private.m_systemTimer.GetFPS() + "");      
+                            TheObjectHandler.Instance().GetObject("DrawName").SetMessage(Private.m_systemTimer.GetFPS() + "");      
                         };
                         requestAnimationFrame(Run);
                     }
