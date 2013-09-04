@@ -52,11 +52,12 @@
 							var height = window.innerHeight - Private.m_touchAreaHeight;
 							height /= 2.0;		
 							
-							Private.m_posX = event.touches[event.touches.length - 1].clientX - width;
+							Private.m_posX = event.touches[0].clientX - width;
 							Private.m_posX *= TheEngine.Instance().GetScreenWidth() / Private.m_touchAreaWidth;
-							Private.m_posY = event.touches[event.touches.length - 1].clientY - height;
+							Private.m_posY = event.touches[0].clientY - height;
 							Private.m_posY *= TheEngine.Instance().GetScreenHeight() / Private.m_touchAreaHeight;
 						}
+						event.preventDefault();
 					});
 					
 				TheEngine.Instance().GetDiv().addEventListener('mousemove', function(event)
@@ -84,10 +85,12 @@
 						var height = window.innerHeight - Private.m_touchAreaHeight;
 						height /= 2.0;		
 						
-						Private.m_posX = event.touches[event.touches.length - 1].clientX - width;
+						Private.m_posX = event.touches[0].clientX - width;
 						Private.m_posX *= TheEngine.Instance().GetScreenWidth() / Private.m_touchAreaWidth;
-						Private.m_posY = event.touches[event.touches.length - 1].clientY - height;
+						Private.m_posY = event.touches[0].clientY - height;
 						Private.m_posY *= TheEngine.Instance().GetScreenHeight() / Private.m_touchAreaHeight;
+						
+						event.preventDefault();
 					});
 					
 				TheEngine.Instance().GetDiv().addEventListener('mousedown', function(event)
@@ -105,9 +108,10 @@
 						Private.m_posY *= TheEngine.Instance().GetScreenHeight() / Private.m_touchAreaHeight;
 					});
 					
-				TheEngine.Instance().GetDiv().addEventListener('touchend', function()
+				TheEngine.Instance().GetDiv().addEventListener('touchend', function(event)
 					{
 						Private.m_touched = false;
+						event.preventDefault();
 					});
 					
 				TheEngine.Instance().GetDiv().addEventListener('mouseup', function()

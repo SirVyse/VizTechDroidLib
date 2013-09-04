@@ -278,17 +278,6 @@ function Engine()
 
                 $(window).bind('resize', Public.HandleResize);
                 $(window).bind('orientationchange', Public.HandleResize);
-                    
-                //Stops touch screen controls
-                $(document).on('touchStart', function(event)
-                {
-                    event.preventDefault();
-                });
-
-                $(document).on('touchMove', function(event)
-                {
-                    event.preventDefault();
-                });
 
 				TheInput.Instance().Initialize();
                 Private.m_systemTimer.Start();
