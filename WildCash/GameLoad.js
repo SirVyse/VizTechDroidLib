@@ -10,7 +10,7 @@ function GameIncludes()
 {
     gameIncludes++;
 
-    if(gameIncludes === 3)
+    if(gameIncludes === 4)
     {     
 		FinishedGameLoad();
     }
@@ -21,4 +21,6 @@ function GameIncludes()
     LoadScript("WildCash/MainGameState.js", GameIncludes);
     LoadScript("WildCash/ButtonProcess.js", GameIncludes);
 	LoadScript("WildCash/Buttons.js", GameIncludes);
+	
+	LoadScript("WildCash/ReelProcess.js", GameIncludes);
 }());

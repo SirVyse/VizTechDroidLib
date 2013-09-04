@@ -10,8 +10,6 @@
 			m_timer: 0
         };
     }());
-
-	ButtonProcess.prototype.Private.m_processState = "Uninitialized";
 	
     //Public Member Functions
 	this.Complete = function()
@@ -42,3 +40,4 @@
 }
 
 Inherit(ButtonProcess, Process);
+ButtonProcess.prototype.m_processState = "Uninitialized";

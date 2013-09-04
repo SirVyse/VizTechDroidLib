@@ -5,12 +5,6 @@
     //Public Member Functions
     this.Enter = function()
 	{
-		for(var i = 0; i < 5; i++)
-        {           
-			var a = TheObjectHandler.Instance().GetObject("E_Reel1Strip").GetInstance(i);
-			a.PlaySprite(true, 0.01, 0, 49);
-		}
-		
 		TheButtons.Instance().HoldStartButtons();
 	};
 
@@ -20,7 +14,12 @@
 		
 		if(TheButtons.Instance().ButtonPressed("Start"))
 		{
-		
+			TheObjectHandler.Instance().GetObject("E_Reel1Strip").SetVisible(true);
+			for(var i = 0; i < 5; i++)
+			{          			
+				var reelProcess = new ReelProcess(TheObjectHandler.Instance().GetObject("E_Reel1Strip").GetInstance(i), TheObjectHandler.Instance().GetObject("E_Reel" + (i + 1)), 1.0 + (i * 0.2));
+				TheEngine.Instance().GetProcessManager().AddProcessToList(reelProcess);
+			}
 		}
 		else if(TheButtons.Instance().ButtonPressed("Info"))
 		{

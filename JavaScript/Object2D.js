@@ -81,7 +81,10 @@ function Object2D()
         {
             for(i = 0; i < Private.m_instances.length; i++)
             {
-                Private.m_instances[i].Draw(context, atlas, Private.m_texture, Private.m_buffer);
+				if(Private.m_instances[i].GetVisible())
+				{
+					Private.m_instances[i].Draw(context, atlas, Private.m_texture, Private.m_buffer);
+				}
             }
         }
     };

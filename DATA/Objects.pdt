@@ -106,34 +106,102 @@
 </Object2D>
 
 <Object2D>
-	<Settings Name="E_Reel1" Priority="0" Visible="false"/>
+	<Settings Name="E_Reel1" Priority="0" Visible="true"/>
 	<Texture Texture1="Symbols.png" />
-	<Instances Amount="5">
-		<Instance Visible="false">
-			<Position x="100.0f" y="-51.0f" />
-			<Scale x="1.5625" y="1.745625" />
+	<Instances Amount="3">
+		<Instance>
+			<Position x="62.0f" y="101.0f" />
+			<Scale x="0.9765625f" y="1.0228271484f" />
 		</Instance>
 		<Instance>
-			<Position x="100.0f" y="173.0f" />
-			<Scale x="1.5625" y="1.745625" />
+			<Position x="62.0f" y="233.0f" />
+			<Scale x="0.9765625f" y="1.0228271484f" />
 		</Instance>
 		<Instance>
-			<Position x="100.0f" y="397.0f" />
-			<Scale x="1.5625" y="1.745625" />
-		</Instance>
-		<Instance>
-			<Position x="100.0f" y="621.0f" />
-			<Scale x="1.5625" y="1.745625" />
-		</Instance>
-		<Instance Visible="false">
-			<Position x="100.0f" y="845.0f" />
-			<Scale x="1.5625" y="1.745625" />
+			<Position x="62.0f" y="364.0f" />
+			<Scale x="0.9765625f" y="1.0228271484f" />
 		</Instance>
 	</Instances>
 </Object2D>
 
 <Object2D>
-	<Settings Name="E_Reel1Strip" Visible="true" Priority="0" />
+	<Settings Name="E_Reel2" Priority="0" Visible="true"/>
+	<Texture Texture1="Symbols.png" />
+	<Instances Amount="3">
+		<Instance>
+			<Position x="200.0f" y="101.0f" />
+			<Scale x="0.9765625f" y="1.0228271484f" />
+		</Instance>
+		<Instance>
+			<Position x="200.0f" y="233.0f" />
+			<Scale x="0.9765625f" y="1.0228271484f" />
+		</Instance>
+		<Instance>
+			<Position x="200.0f" y="364.0f" />
+			<Scale x="0.9765625f" y="1.0228271484f" />
+		</Instance>
+	</Instances>
+</Object2D>
+
+<Object2D>
+	<Settings Name="E_Reel3" Priority="0" Visible="true"/>
+	<Texture Texture1="Symbols.png" />
+	<Instances Amount="3">
+		<Instance>
+			<Position x="338.0f" y="101.0f" />
+			<Scale x="0.9765625f" y="1.0228271484f" />
+		</Instance>
+		<Instance>
+			<Position x="338.0f" y="233.0f" />
+			<Scale x="0.9765625f" y="1.0228271484f" />
+		</Instance>
+		<Instance>
+			<Position x="338.0f" y="364.0f" />
+			<Scale x="0.9765625f" y="1.0228271484f" />
+		</Instance>
+	</Instances>
+</Object2D>
+
+<Object2D>
+	<Settings Name="E_Reel4" Priority="0" Visible="true"/>
+	<Texture Texture1="Symbols.png" />
+	<Instances Amount="3">
+		<Instance>
+			<Position x="475.0f" y="101.0f" />
+			<Scale x="0.9765625f" y="1.0228271484f" />
+		</Instance>
+		<Instance>
+			<Position x="475.0f" y="233.0f" />
+			<Scale x="0.9765625f" y="1.0228271484f" />
+		</Instance>
+		<Instance>
+			<Position x="475.0f" y="364.0f" />
+			<Scale x="0.9765625f" y="1.0228271484f" />
+		</Instance>
+	</Instances>
+</Object2D>
+
+<Object2D>
+	<Settings Name="E_Reel5" Priority="0" Visible="true"/>
+	<Texture Texture1="Symbols.png" />
+	<Instances Amount="3">
+		<Instance>
+			<Position x="613.0f" y="101.0f" />
+			<Scale x="0.9765625f" y="1.0228271484f" />
+		</Instance>
+		<Instance>
+			<Position x="613.0f" y="233.0f" />
+			<Scale x="0.9765625f" y="1.0228271484f" />
+		</Instance>
+		<Instance>
+			<Position x="613.0f" y="364.0f" />
+			<Scale x="0.9765625f" y="1.0228271484f" />
+		</Instance>
+	</Instances>
+</Object2D>
+
+<Object2D>
+	<Settings Name="E_Reel1Strip" Visible="false" Priority="0" />
 	<Texture Texture1="Reels.png" />
 	<Position x="100.0f" y="175.0f" />
 	<Scale x="2.5f" y="2.66f" />
