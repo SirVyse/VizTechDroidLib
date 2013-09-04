@@ -52,9 +52,9 @@
 							var height = window.innerHeight - Private.m_touchAreaHeight;
 							height /= 2.0;		
 							
-							Private.m_posX = event.touches[0].clientX - width;
+							Private.m_posX = event.touches[event.touches.length - 1].clientX - width;
 							Private.m_posX *= TheEngine.Instance().GetScreenWidth() / Private.m_touchAreaWidth;
-							Private.m_posY = event.touches[0].clientY - height;
+							Private.m_posY = event.touches[event.touches.length - 1].clientY - height;
 							Private.m_posY *= TheEngine.Instance().GetScreenHeight() / Private.m_touchAreaHeight;
 						}
 					});
@@ -84,9 +84,9 @@
 						var height = window.innerHeight - Private.m_touchAreaHeight;
 						height /= 2.0;		
 						
-						Private.m_posX = event.touches[0].clientX - width;
+						Private.m_posX = event.touches[event.touches.length - 1].clientX - width;
 						Private.m_posX *= TheEngine.Instance().GetScreenWidth() / Private.m_touchAreaWidth;
-						Private.m_posY = event.touches[0].clientY - height;
+						Private.m_posY = event.touches[event.touches.length - 1].clientY - height;
 						Private.m_posY *= TheEngine.Instance().GetScreenHeight() / Private.m_touchAreaHeight;
 					});
 					
