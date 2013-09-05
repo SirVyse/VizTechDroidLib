@@ -36,11 +36,6 @@
 		
 		$(Private.m_audio).on("loadeddata", LoadedCallback)
 
-        Private.m_audio.onabort = function()
-        {
-            alert("Failed to load the audio:" + Private.m_name);
-        };
-
         Private.m_audio.src = fullFilename;
     };
 	
