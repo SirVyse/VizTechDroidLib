@@ -33,7 +33,7 @@ function EngineIncludes()
 {
     engineIncludes++;
 
-    if(engineIncludes === 13)
+    if(engineIncludes === 15)
     {     
         LoadScript("JavaScript/Engine.js", FinishedScriptLoad);
     }
@@ -61,6 +61,9 @@ function ObjectIncludes()
     LoadScript("JavaScript/Texture.js", EngineIncludes);
     LoadScript("JavaScript/TextureManager.js", EngineIncludes);
 
+	LoadScript("JavaScript/AudioSample.js", EngineIncludes);
+    LoadScript("JavaScript/AudioManager.js", EngineIncludes)
+	
     LoadScript("JavaScript/State.js", EngineIncludes);
     LoadScript("JavaScript/StateManager.js", EngineIncludes);
     LoadScript("JavaScript/Timer.js", EngineIncludes);

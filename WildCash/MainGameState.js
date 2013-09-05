@@ -19,6 +19,8 @@
 			{          			
 				var reelProcess = new ReelProcess(TheObjectHandler.Instance().GetObject("E_Reel1Strip").GetInstance(i), TheObjectHandler.Instance().GetObject("E_Reel" + (i + 1)), 1.0 + (i * 0.2));
 				TheEngine.Instance().GetProcessManager().AddProcessToList(reelProcess);
+				
+				TheAudioManager.Instance().GetAudioSample("ReelSpin").Play();
 			}
 		}
 		else if(TheButtons.Instance().ButtonPressed("Info"))
@@ -45,7 +47,7 @@
 }
 
 Inherit(MainGameState, State);
-MainGameState.BASE.Private.m_stateName = "MainGameState";
+MainGameState.prototype.m_stateName = "MainGameState";
 
 var mainGameState = new MainGameState();
 TheEngine.Instance().AddState(mainGameState);
