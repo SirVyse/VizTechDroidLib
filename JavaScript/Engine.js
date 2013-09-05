@@ -313,10 +313,11 @@ function Engine()
 
 				Private.m_stateManager.SetCurrentState(stateName);
                 TheTextureManager.Instance().LoadTextures();
+				TheAudioManager.Instance().LoadAudio();
 
                 var timerID = setInterval(function()
                 {
-                    if(TheTextureManager.Instance().FinishedLoading())
+                    if(TheTextureManager.Instance().FinishedLoading() && TheAudioManager.Instance().FinishedLoading())
                     {
                         TheObjectHandler.Instance().LoadObjects();     
                         Public.HandleResize();                       

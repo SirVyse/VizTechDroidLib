@@ -26,6 +26,7 @@ function AudioManager()
         FinishedLoading,
         LoadAudio,
 		Play,
+		Start,
 		Timer;
 
         Public = 
@@ -70,9 +71,6 @@ function AudioManager()
 				LoadedCallback = function()
 				{
 					Private.m_finishedLoading = true;
-					Private.m_audio.currentTime = Private.m_silentSample.m_beginTime;
-					Private.m_audio.play();
-					Private.m_silentTimer = setTimeout(Public.Timer, (Private.m_silentSample.m_endTime - Private.m_silentSample.m_beginTime) * 1000);
 				};
 		
 				$(Private.m_audio).on("loadeddata", LoadedCallback)
@@ -104,6 +102,13 @@ function AudioManager()
 					clearTimeout(Private.m_silentTimer);
 					Private.m_silentTimer = setTimeout(Public.Timer, endDelay * 1000);
 				}
+			},
+			
+			Start: function()
+			{
+				Private.m_audio.currentTime = Private.m_silentSample.m_beginTime;
+				Private.m_audio.play();
+				Private.m_silentTimer = setTimeout(Public.Timer, (Private.m_silentSample.m_endTime - Private.m_silentSample.m_beginTime) * 1000);
 			},
 			
 			Timer: function()

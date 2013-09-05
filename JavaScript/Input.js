@@ -96,7 +96,7 @@
 						
 						if(!Private.m_firstTouch)
 						{
-							TheAudioManager.Instance().LoadAudio();
+							TheAudioManager.Instance().Start();
 							Private.m_firstTouch = true;
 						}
 					});
@@ -117,7 +117,7 @@
 						
 						if(!Private.m_firstTouch)
 						{
-							TheAudioManager.Instance().LoadAudio();
+							TheAudioManager.Instance().Start();
 							Private.m_firstTouch = true;
 						}
 					});
