@@ -22,6 +22,11 @@
             //Function Definitions
             AddAudioSample: function(audio)
             {
+				if(Private.m_numLoaded === Private.m_numToLoad)
+				{
+					return;
+				}
+			
                 if(Private.m_audioSamples.hasOwnProperty(audio.GetName()))
                 {
                     alert("The Audio:" + audio.GetName() + " cannot be added as one already exists with this name!");
