@@ -37,14 +37,14 @@
 		$(Private.m_audio).on("loadeddata", LoadedCallback)
 
         Private.m_audio.src = fullFilename;
+		Private.m_audio.onseeked = function()
+		{
+			Private.m_audio.currenttime = 0;
+		};
     };
 	
     this.Play = function(loop)
     {
-		if(window.chrome)
-		{
-			Private.m_audio.load();
-		}
         Private.m_audio.play();
     };
 
