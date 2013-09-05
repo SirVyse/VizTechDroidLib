@@ -6,6 +6,7 @@
         var Private = 
         {
             //Variables
+			m_firstTouch: false,
             m_posX: 0,
             m_posY: 0,
             m_touched: false,
@@ -92,6 +93,12 @@
 						Private.m_posY *= TheEngine.Instance().GetScreenHeight() / Private.m_touchAreaHeight;
 						
 						event.preventDefault();
+						
+						if(!Private.m_firstTouch)
+						{
+							TheAudioManager.Instance().LoadAudio();
+							Private.m_firstTouch = true;
+						}
 					});
 					
 				TheEngine.Instance().GetDiv().addEventListener('mousedown', function(event)
@@ -107,6 +114,12 @@
 						Private.m_posX *= TheEngine.Instance().GetScreenWidth() / Private.m_touchAreaWidth;
 						Private.m_posY = event.clientY - height;
 						Private.m_posY *= TheEngine.Instance().GetScreenHeight() / Private.m_touchAreaHeight;
+						
+						if(!Private.m_firstTouch)
+						{
+							TheAudioManager.Instance().LoadAudio();
+							Private.m_firstTouch = true;
+						}
 					});
 					
 				TheEngine.Instance().GetDiv().addEventListener('touchend', function(event)
