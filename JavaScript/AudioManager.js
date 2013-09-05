@@ -1,4 +1,11 @@
-﻿function AudioManager()
+﻿function AudioSample(name, beginTime, endTime)
+{
+	this.m_beginTime = beginTime;
+	this.m_endTime = endTime;
+	this.m_name = name;
+}
+
+function AudioManager()
 {
     var Public;
    
@@ -6,56 +13,40 @@
         var Private = 
         {
             //Variables
-            m_numLoaded: 0,
-            m_numToLoad: 0,
-            m_audioSamples: {}
+			m_activeSound: false,
+			m_audio: 0,
+            m_audioSamples: {},
+			m_finishedLoading: false,
+			m_silentSample: 0,
+			m_silentTimer: 0
         },
             
         //Function Declarations
         AddAudioSample,
         FinishedLoading,
-        GetAudioSample,
-        LoadAudio;
+        LoadAudio,
+		Play,
+		Timer;
 
         Public = 
         {
             //Function Definitions
             AddAudioSample: function(audio)
             {
-				if(Private.m_numLoaded === Private.m_numToLoad)
-				{
-					return;
-				}
-			
-                if(Private.m_audioSamples.hasOwnProperty(audio.GetName()))
+                if(Private.m_audioSamples.hasOwnProperty(audio.m_name))
                 {
-                    alert("The Audio:" + audio.GetName() + " cannot be added as one already exists with this name!");
+                    alert("The Audio:" + audio.m_name + " cannot be added as one already exists with this name!");
                     return false;
                 }
 
-                Private.m_audioSamples[audio.GetName()] = audio;
-                Private.m_numLoaded++;
+                Private.m_audioSamples[audio.m_name] = audio;
             
                 return true;
             },
 
             FinishedLoading: function()
             {
-                if(Private.m_numToLoad === Private.m_numLoaded)
-                {
-                    return true;
-                }
-                return false;
-            },
-
-            GetAudioSample: function(audioName)
-            {
-                if(!Private.m_audioSamples.hasOwnProperty(audioName))
-                {
-                    alert("Cannot retrieve audio:" + audioName + " from TheAudioManager, because it does not exist!");
-                    return false;
-                }
-                return Private.m_audioSamples[audioName];
+                return Private.m_finishedLoading;
             },
 
             LoadAudio: function()
@@ -67,19 +58,60 @@
 					alert("Can't Play OGG"); 
 				}
 			
-                var file = new XMLReader(), audioSamples, i, audio;
+                var file = new XMLReader(), audio, audioSamples, i, audio, LoadedCallback;
                 file.Open("DATA/AudioSamples.pdt");
 
-                audioSamples = file.GetBaseNodes("AudioSample");
-                Private.m_numToLoad = audioSamples.length;
-
+				audio = file.GetBaseNodes("Audio");
+				
+				var filename = "AUDIO/" + audio[0].getAttribute("Filename");
+				var silentSample = audio[0].getAttribute("SilentSample");
+				Private.m_audio = new Audio();
+				
+				LoadedCallback = function()
+				{
+					Private.m_finishedLoading = true;
+					Private.m_audio.currentTime = Private.m_silentSample.m_beginTime;
+					Private.m_audio.play();
+					Private.m_silentTimer = setTimeout(Public.Timer, (Private.m_silentSample.m_endTime - Private.m_silentSample.m_beginTime) * 1000);
+				};
+		
+				$(Private.m_audio).on("loadeddata", LoadedCallback)
+				Private.m_audio.src = filename;
+                
+				audioSamples = audio[0].getElementsByTagName("AudioSample");
+				
                 for(i = 0; i < audioSamples.length; i++)
                 {
-                    audioSample = new AudioSample();
-                    audioSample.Load(audioSamples[i].getAttribute("Name"), audioSamples[i].getAttribute("Filename"));
+                    audioSample = new AudioSample(audioSamples[i].getAttribute("Name"), audioSamples[i].getAttribute("Begin"), audioSamples[i].getAttribute("End"));
+					
+					if(audioSample.m_name === silentSample)
+					{
+						Private.m_silentSample = audioSample;
+					}
+					
+                    this.AddAudioSample(audioSample);
                 }
                 return true;
-            }
+            },
+			
+			Play: function(name)
+			{				
+				if(Private.m_audioSamples.hasOwnProperty(name))
+				{
+					Private.m_audio.currentTime = Private.m_audioSamples[name].m_beginTime;
+					var endDelay = Private.m_audioSamples[name].m_endTime - Private.m_audioSamples[name].m_beginTime;
+					Private.m_audio.play();
+					clearTimeout(Private.m_silentTimer);
+					Private.m_silentTimer = setTimeout(Public.Timer, endDelay * 1000);
+				}
+			},
+			
+			Timer: function()
+			{
+				Private.m_audio.currentTime = Private.m_silentSample.m_beginTime;
+				Private.m_audio.play();
+				Private.m_silentTimer = setTimeout(Public.Timer, (Private.m_silentSample.m_endTime - Private.m_silentSample.m_beginTime) * 1000);
+			}
         };
     }());
 

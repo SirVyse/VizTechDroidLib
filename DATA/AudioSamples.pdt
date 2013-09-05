@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <MD5>
-<AudioSample Name="ReelSpin" Filename="SX_REELSPIN.ogg" />
+<Audio Filename="SX_REELSPIN.ogg" SilentSample="Silent">
+	<AudioSample Name="Silent" Begin="0.0" End="0.5" />
+	<AudioSample Name="ReelSpin" Begin="0.5" End="2.568" />
+</Audio>
 </MD5>

@@ -20,7 +20,7 @@
 				var reelProcess = new ReelProcess(TheObjectHandler.Instance().GetObject("E_Reel1Strip").GetInstance(i), TheObjectHandler.Instance().GetObject("E_Reel" + (i + 1)), 1.0 + (i * 0.2));
 				TheEngine.Instance().GetProcessManager().AddProcessToList(reelProcess);
 				
-				TheAudioManager.Instance().GetAudioSample("ReelSpin").Play();
+				TheAudioManager.Instance().Play("ReelSpin");
 			}
 		}
 		else if(TheButtons.Instance().ButtonPressed("Info"))
