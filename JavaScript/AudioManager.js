@@ -56,10 +56,10 @@
             LoadAudio: function()
             {
 				var audio = new Audio();
-				var canPlayWav = !!audio.canPlayType && "" != audio.canPlayType('audio/wav');
+				var canPlayWav = !!audio.canPlayType && "" != audio.canPlayType('audio/ogg');
 				if (!canPlayWav)
 				{ 
-					alert("Can't Play Wav"); 
+					alert("Can't Play OGG"); 
 				}
 			
 			
