@@ -67,7 +67,6 @@
 					alert("Can't Play OGG"); 
 				}
 			
-			
                 var file = new XMLReader(), audioSamples, i, audio;
                 file.Open("DATA/AudioSamples.pdt");
 

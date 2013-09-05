@@ -36,16 +36,6 @@
 		
 		$(Private.m_audio).on("loadeddata", LoadedCallback)
 
-    //    Private.m_audio.oncanplaythrough = function()
-     //   {
-      //      LoadedCallback();
-       // };
-
-        Private.m_audio.onerror = function()
-        {
-            alert("Failed to load the audio:" + Private.m_name);
-        };
-
         Private.m_audio.onabort = function()
         {
             alert("Failed to load the audio:" + Private.m_name);
