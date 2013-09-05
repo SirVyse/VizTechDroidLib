@@ -56,6 +56,7 @@
 	
     this.Play = function(loop)
     {
+		Private.m_audio.load();
         Private.m_audio.play();
     };
 
