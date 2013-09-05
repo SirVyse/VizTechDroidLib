@@ -55,6 +55,14 @@
 
             LoadAudio: function()
             {
+				var audio = new Audio();
+				var canPlayWav = !!audio.canPlayType && "" != audio.canPlayType('audio/wav');
+				if (!canPlayWav)
+				{ 
+					alert("Can't Play Wav"); 
+				}
+			
+			
                 var file = new XMLReader(), audioSamples, i, audio;
                 file.Open("DATA/AudioSamples.pdt");
 
